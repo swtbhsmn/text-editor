@@ -1,0 +1,29 @@
+<html !doctype>
+<head>
+<title>Edit text</title>
+</head>
+<body>
+<div id="editor"></div>
+<button id="bold-button">Bold</button>
+<button id="italic-button">Italic</button>
+
+<script>
+  // Get the editor and button elements
+  let editor = document.getElementById("editor");
+  let boldButton = document.getElementById("bold-button");
+  let italicButton = document.getElementById("italic-button");
+
+  // Make the editor element editable
+  editor.contentEditable = true;
+
+  // Add event listeners to the buttons
+  boldButton.addEventListener("click", function() {
+    document.execCommand("bold", false, null);
+  });
+  italicButton.addEventListener("click", function() {
+    document.execCommand("italic", false, null);
+  });
+</script>
+
+</body>
+</html>
